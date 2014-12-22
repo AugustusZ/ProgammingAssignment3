@@ -12,7 +12,7 @@ AND
           outcome <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
 
 2.
-Solusion for checking "if in" is retrieved from the answer by medriscoll on stackoverflow.com: http://stackoverflow.com/questions/1169248/r-function-for-testing-if-a-vector-contains-a-given-element, i.e.
+Solution for checking "if in" is retrieved from the answer by medriscoll on stackoverflow.com: http://stackoverflow.com/questions/1169248/r-function-for-testing-if-a-vector-contains-a-given-element, i.e.
 
         v <- c('a','b','c','e')
        'b' %in% v
@@ -21,3 +21,9 @@ Solusion for checking "if in" is retrieved from the answer by medriscoll on stac
         ## returns the first location of 'b', in this case: 2
 
 3.
+Solution for sorting the data frame is retrieved from http://www.dummies.com/how-to/content/how-to-sort-data-frames-in-r.html, i.e.
+
+        order.outcomes <- order(outcome.data$Hospital.Name)
+        outcome.data <- outcome.data[order.outcomes,]
+
+then the data frame of "outcome.data" is sorted according to $Hospital.Name alphabet order.
