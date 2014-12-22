@@ -29,5 +29,6 @@ Solution for sorting the data frame is retrieved from http://www.dummies.com/how
 then the data frame of "outcome.data" is sorted according to $Hospital.Name alphabet order.
 
 4.# this part cost my whole evening!
+
 The code got the wrong result and I did not know why. Then I manually run codes in console step by step and then I found that:
 in my former solution, I acquired the indice for the wanted part data frame and then used these indice to subset a subset of the data. Of course it is wrong.
