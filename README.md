@@ -3,6 +3,10 @@ ProgammingAssignment3
 
 Repository for Programming Assignment 3 for R Programming on Coursera
 
+PART 2 FINDING THE BEST HOSPITAL IN A STATE
+
+        best.R
+
 1.
 Naively using the template provided by the course led to that the variable storing the read-in data have the same name as the second argument, which is the very reason the test for checking arguments did not work at the first place, i.e.,
 
