@@ -74,4 +74,4 @@ Also able to be retrieved from the link given in <3.>, we can rank the data base
         index <- order(certain_state[[outcome_col]],certain_state$Hospital.Name) # line *
         certain_state <- certain_state[index, ]
         
-<?> My current concern is that, how to use with() to rewrite line *, when I only know the outcome_col and have to use [[]] for one col?
+<?> My current concern is, how to use with() to rewrite line *, when I only know the outcome_col and have to use [ [ ] ] for one col?
