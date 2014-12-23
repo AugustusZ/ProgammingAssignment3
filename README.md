@@ -45,26 +45,25 @@ PART 3 RANKING HOSPITIALS BY OUTCOME IN A STATE
 Just wrong result. So, agian, I manually run the codes and found:
 When ranking data, the data must be numeric. Sometimes (e.g. before revising the code in this part), the data read in are characters, and they work well with which.max() and which.min() because of coercion, but not ranking (order(), min(), max(), etc.). Check these out:
 
-> d <- c("10","9","11","2","0","404","hello") # I give a example *character* vector here
-> d # yeah, they are really characters
-[1] "10"    "9"     "11"    "2"     "0"     "404"   "hello"
-> max(d)
-[1] "hello"
-> min(d)
-[1] "0"
-> order.index <- order(d) # so I order the whole vector
-> ordered.d <- d[order.index]
-> ordered.d # the order is based on ... ASCII?
-[1] "0"     "10"    "11"    "2"     "404"   "9"     "hello"
-> d[which.min(d)] # but which.max and which.min work well with characters, because of coercion
-[1] "0"
-Warning message:
-In which.min(d) : NAs introduced by coercion
-> d[which.max(d)]
-[1] "404"
-Warning message:
-In which.max(d) : NAs introduced by coercion
-# end
+        > d <- c("10","9","11","2","0","404","hello") # I give a example *character* vector here
+        > d # yeah, they are really characters
+        [1] "10"    "9"     "11"    "2"     "0"     "404"   "hello"
+        > max(d)
+        [1] "hello"
+        > min(d)
+        [1] "0"
+        > order.index <- order(d) # so I order the whole vector
+        > ordered.d <- d[order.index]
+        > ordered.d # the order is based on ... ASCII?
+        [1] "0"     "10"    "11"    "2"     "404"   "9"     "hello"
+        > d[which.min(d)] # but which.max and which.min work well with characters, because of coercion
+        [1] "0"
+        Warning message:
+        In which.min(d) : NAs introduced by coercion
+        > d[which.max(d)]
+        [1] "404"
+        Warning message:
+        In which.max(d) : NAs introduced by coercion
 
 Hence, as for character vectors, use as.numeric() before order(). So first of all work, know the data class :3
 
