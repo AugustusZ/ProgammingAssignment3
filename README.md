@@ -75,3 +75,10 @@ Also able to be retrieved from the link given in <3.>, we can rank the data base
         certain_state <- certain_state[index, ]
         
 <?> My current concern is, how to use with() to rewrite line *, when I only know the outcome_col and have to use [ [ ] ] for one col?
+
+PART 4 RANKING HOSPITALS IN ALL STATES
+
+        rankall.R
+
+7.
+~
